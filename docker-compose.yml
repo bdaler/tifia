@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  # php section
+  tifia:
+    container_name: tifia
+    image: bdaler/laravel-mysql:1.0
+    volumes:
+      - ./:/var/www/tifia
+    working_dir:
+      /var/www/tifia
+    command: composer install
